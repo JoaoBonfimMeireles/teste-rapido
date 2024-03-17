@@ -1,6 +1,7 @@
 const valor = Number(Math.round(Math.random() * 10))
 let meuvalor = "";
 let text = document.getElementById("text");
+let tentativas = []
 // const button = document.getElementById("button").onclick = confirmar();
 
 document.getElementById("input").addEventListener("input", function () {
@@ -10,18 +11,19 @@ document.getElementById("input").addEventListener("input", function () {
 
 document.getElementById("button").addEventListener("click", function () {
     text = document.getElementById("text");
+    tentativas.push(meuvalor)
+    console.log(tentativas, valor)
     confirmar();
 });
 
 function confirmar() {
     if (meuvalor === valor) {
-        text.innerHTML = "Parabens"
+        text.innerHTML = "Parabens " +  tentativas.length
     } else if(meuvalor === "") {
         text.innerHTML = "digite um valor"
-    } 
-    else {
+    } else {
         text.innerHTML = "Burrão"
     }
+    console.log("1", tentativas)
 }
 
-console.log(valor)
