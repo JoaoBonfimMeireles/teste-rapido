@@ -12,7 +12,6 @@ document.getElementById("input").addEventListener("input", function () {
 document.getElementById("button").addEventListener("click", function () {
     text = document.getElementById("text");
     tentativas.push(meuvalor)
-    console.log(tentativas, valor)
     confirmar();
 });
 
@@ -24,6 +23,5 @@ function confirmar() {
     } else {
         text.innerHTML = "Burrão"
     }
-    console.log("1", tentativas)
 }
 
